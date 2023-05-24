@@ -7,24 +7,13 @@ const inter = Inter({
   display: "swap",
 });
 
-export const metadata = {
-  title: "sparknine",
-  description: "Spark Nine Community Project Forum",
-};
-
-export interface Params {
-  params: {
-    readonly id: string;
-  };
-}
-
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} bg-background`}>
+    <html lang="en" className={`${inter.variable} bg-orange-400`}>
       <body>{children}</body>
     </html>
   );
