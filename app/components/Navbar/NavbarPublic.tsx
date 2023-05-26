@@ -48,19 +48,19 @@ const NavbarPublic = memo(function NavbarPublic({ path }: { path: string }) {
           <div className="flex">
             <Image
               src="/logo.svg"
-              alt="Intellilearn Logo"
+              alt="Spark9 Logo"
               width={35}
               height={35}
             />
             <p className="pl-2 text-center text-3xl font-semibold">
-              Spark9 Project
+              Spark9
             </p>
           </div>
         </Link>
       </div>
-      <ul className="flex justify-center">
+      <ul className="flex justify-between w-full max-w-screen-sm">
         {items.map((item) => (
-          <li key={item.label} className="p-2 px-8">
+          <li key={item.label} className="p-2 flex justify-between">
             <Link href={item.path}>
               <p
                 className={`text-xl font-medium transition duration-100 ease-linear ${
@@ -75,6 +75,7 @@ const NavbarPublic = memo(function NavbarPublic({ path }: { path: string }) {
           </li>
         ))}
       </ul>
+      <div className="text-white">Dark Mode</div>
     </nav>
   );
 });
