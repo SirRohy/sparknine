@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import { memo } from "react";
@@ -17,7 +16,7 @@ interface authItem {
 
 // TODO: update paths once pages are added
 const items: navItem[] = [
-  { label: "Projects", path: "/#" },
+  { label: "Projects", path: "/projects" },
   { label: "Blogs", path: "/#" },
   { label: "Contact Us", path: "/#" },
   { label: "Donations", path: "/#" },
@@ -42,19 +41,12 @@ const authButtons: authItem[] = [
 
 const NavbarPublic = memo(function NavbarPublic({ path }: { path: string }) {
   return (
-    <nav className="z-10 flex w-full items-center justify-between bg-slate-900 p-6 text-slate-200">
+    <nav className="sticky top-0 h-20 z-10 flex w-full items-center justify-between bg-slate-900 p-6 text-slate-200">
       <div>
         <Link href={"/"}>
           <div className="flex">
-            <Image
-              src="/logo.svg"
-              alt="Spark9 Logo"
-              width={35}
-              height={35}
-            />
-            <p className="pl-2 text-center text-3xl font-semibold">
-              Spark9
-            </p>
+            <Image src="/logo.svg" alt="Spark9 Logo" width={35} height={35} />
+            <p className="pl-2 text-center text-3xl font-semibold">Spark9</p>
           </div>
         </Link>
       </div>

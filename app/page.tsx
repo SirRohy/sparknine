@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main>
       <NavbarPublic path="/" />
-      <div className="absolute inset-0 -z-10 flex h-screen flex-col items-center justify-center self-center text-center text-slate-300">
+      <div className="relative bg-background flex h-screen flex-col items-center justify-center self-center text-center text-textcolor">
         <div className="relative">
           <Image
             src="/nature.jpg"
@@ -26,6 +26,7 @@ export default function Home() {
           <p>Get started for free</p>
         </Link>
       </div>
+      <div className="h-screen bg-transparent"></div>
     </main>
   );
 }

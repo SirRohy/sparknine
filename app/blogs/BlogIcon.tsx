@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { memo } from "react";
-import projects from "./Projects.json";
+import projects from "./Blogs.json";
 
 const ProjectIcon = memo(function ProjectIcon({ index }: { index: number }) {
   const project = projects.find((project) => project.index === index)
