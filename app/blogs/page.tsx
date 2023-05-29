@@ -7,7 +7,7 @@ import projects from "./Blogs.json";
 export default function Home() {
   return (
     <main>
-      <Navbar path="/projects" />
+      <Navbar path="/blogs" />
       <div className="relative bg-background flex h-max flex-col items-center justify-center self-center text-center text-textcolor p-6">
         <div className="w-full text-left border-b pb-1 text-xl">
           Upcoming Projects

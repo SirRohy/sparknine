@@ -2,6 +2,7 @@
   {
     "index": 1,
     "name": "Aaliyah",
+    "imageAddress": "/Members/Aaliyah.jpg",
     "Roles": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "phone":"",
     "email":""
@@ -14,49 +15,49 @@
     "email":""
   },
   {
-    "index": 1,
+    "index": 3,
     "name": "Sahba",
     "Roles": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "phone":"",
     "email":""
   },
   {
-    "index": 1,
+    "index": 4,
     "name": "Adib",
     "Roles": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "phone":"",
     "email":""
   },
   {
-    "index": 1,
+    "index": 5,
     "name": "Noora",
     "Roles": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "phone":"",
     "email":""
   },
   {
-    "index": 1,
+    "index": 6,
+    "name": "Roham",
+    "Roles": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "phone":"",
+    "email":""
+  },
+  {
+    "index": 7,
     "name": "Aaliyah",
     "Roles": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "phone":"",
     "email":""
   },
   {
-    "index": 1,
+    "index": 8,
     "name": "Aaliyah",
     "Roles": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "phone":"",
     "email":""
   },
   {
-    "index": 1,
-    "name": "Aaliyah",
-    "Roles": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "phone":"",
-    "email":""
-  },
-  {
-    "index": 1,
+    "index": 9,
     "name": "Aaliyah",
     "Roles": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "phone":"",
