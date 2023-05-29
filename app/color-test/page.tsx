@@ -1,10 +1,10 @@
 import Link from "next/link";
-import NavbarPublic from "../components/Navbar/NavbarPublic";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
     <main>
-      <NavbarPublic path="/" />
+      <Navbar path="/" />
       <div className="absolute inset-0 -z-10 flex h-screen flex-col items-center justify-center self-center text-center text-slate-300">
         <div className="p-4">
           <p className="w-full p-8 text-6xl font-medium">Spark9 Background</p>

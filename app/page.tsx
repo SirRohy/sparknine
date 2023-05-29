@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
-import NavbarPublic from "./components/Navbar/NavbarPublic";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
     <main>
-      <NavbarPublic path="/" />
+      <Navbar path="/" />
       <div className="relative bg-background flex h-screen flex-col items-center justify-center self-center text-center text-textcolor">
         <div className="relative">
           <Image

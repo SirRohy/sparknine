@@ -20,6 +20,7 @@ const ProjectIcon = memo(function ProjectIcon({ index }: { index: number }) {
         />
         <div>
           <p className="text-3xl font-bold">{project?.name} </p>
+          <p className="text-xl">Date: {project?.startDate}</p>
         </div>
       </div>
       

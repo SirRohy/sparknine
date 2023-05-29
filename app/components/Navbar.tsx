@@ -17,8 +17,8 @@ interface authItem {
 // TODO: update paths once pages are added
 const items: navItem[] = [
   { label: "Projects", path: "/projects" },
-  { label: "Blogs", path: "/#" },
-  { label: "Contact Us", path: "/#" },
+  { label: "Blogs", path: "/blogs" },
+  { label: "About Us", path: "/about-us" },
   { label: "Donations", path: "/#" },
 ];
 
@@ -39,7 +39,7 @@ const authButtons: authItem[] = [
   },
 ];
 
-const NavbarPublic = memo(function NavbarPublic({ path }: { path: string }) {
+const Navbar = memo(function Navbar({ path }: { path: string }) {
   return (
     <nav className="sticky top-0 h-20 z-10 flex w-full items-center justify-between bg-slate-900 p-6 text-slate-200">
       <div>
@@ -72,4 +72,4 @@ const NavbarPublic = memo(function NavbarPublic({ path }: { path: string }) {
   );
 });
 
-export default NavbarPublic;
+export default Navbar;

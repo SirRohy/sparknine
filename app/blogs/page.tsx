@@ -1,13 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import NavbarPublic from "../components/Navbar/NavbarPublic";
+import Navbar from "../components/Navbar";
 import ProjectIcon from "./BlogIcon";
 import projects from "./Blogs.json";
 
 export default function Home() {
   return (
     <main>
-      <NavbarPublic path="/projects" />
+      <Navbar path="/projects" />
       <div className="relative bg-background flex h-max flex-col items-center justify-center self-center text-center text-textcolor p-6">
         <div className="w-full text-left border-b pb-1 text-xl">
           Upcoming Projects
