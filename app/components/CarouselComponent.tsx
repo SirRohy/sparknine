@@ -6,20 +6,23 @@ import { Carousel } from "react-responsive-carousel";
 interface CarouselComponentProps {
   contents: React.ReactElement[];
   seconds: number;
+  width: string;
 }
 
-const CarouselComponent = ({ contents, seconds }: CarouselComponentProps) => {
+const CarouselComponent = ({ contents, seconds, width }: CarouselComponentProps) => {
 
   return (
-    <div className="flex">
+    <div className="w-full flex flex-shrink min-w-[300px]">
       <Carousel
-        autoPlay={true}
+        autoPlay={false}
         interval={seconds*1000}
         stopOnHover={true}
         infiniteLoop={true}
         emulateTouch={true}
         showIndicators={true}
         showThumbs={false}
+        dynamicHeight={false}
+        width={width}
       >
         {contents}
       </Carousel>

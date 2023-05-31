@@ -19,7 +19,7 @@ const items: navItem[] = [
   { label: "Projects", path: "/projects" },
   { label: "Blogs", path: "/blogs" },
   { label: "About Us", path: "/about-us" },
-  { label: "Donations", path: "/#" },
+  { label: "Donations", path: "/donations" },
 ];
 
 const authButtons: authItem[] = [
@@ -50,7 +50,7 @@ const Navbar = memo(function Navbar({ path }: { path: string }) {
           </div>
         </Link>
       </div>
-      <ul className="flex justify-between w-full max-w-screen-sm">
+      <ul className="max-sm:hidden flex justify-between w-full max-w-screen-sm">
         {items.map((item) => (
           <li key={item.label} className="p-2 flex justify-between">
             <Link href={item.path}>
@@ -67,7 +67,7 @@ const Navbar = memo(function Navbar({ path }: { path: string }) {
           </li>
         ))}
       </ul>
-      <div className="text-white">Dark Mode</div>
+      <div className="max-sm:hidden text-white">Dark Mode</div>
     </nav>
   );
 });
