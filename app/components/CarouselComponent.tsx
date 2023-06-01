@@ -14,7 +14,7 @@ const CarouselComponent = ({ contents, seconds, width }: CarouselComponentProps)
   return (
     <div className="w-full flex flex-shrink min-w-[300px]">
       <Carousel
-        autoPlay={false}
+        autoPlay={true}
         interval={seconds*1000}
         stopOnHover={true}
         infiniteLoop={true}

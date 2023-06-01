@@ -12,7 +12,7 @@ const ProjectIcon = memo(function ProjectIcon({ index }: { index: number }) {
     >
       <div className="flex flex-col items-center">
         <Image
-          src="/nature.jpg"
+          src={`${project?.coverImage}`}
           alt="Image description"
           className="rounded-sm"
           width={700}

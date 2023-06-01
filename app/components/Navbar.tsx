@@ -45,8 +45,8 @@ const Navbar = memo(function Navbar({ path }: { path: string }) {
       <div>
         <Link href={"/"}>
           <div className="flex">
-            <Image src="/logo.svg" alt="Spark9 Logo" width={35} height={35} />
-            <p className="pl-2 text-center text-3xl font-semibold">Spark9</p>
+            <Image src="/Logo.jpg" alt="Spark9 Logo" width={150} height={-1} />
+            
           </div>
         </Link>
       </div>
@@ -67,7 +67,7 @@ const Navbar = memo(function Navbar({ path }: { path: string }) {
           </li>
         ))}
       </ul>
-      <div className="max-sm:hidden text-white">Dark Mode</div>
+      <div className="max-sm:hidden text-white"></div>
     </nav>
   );
 });

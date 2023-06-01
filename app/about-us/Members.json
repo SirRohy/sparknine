@@ -3,63 +3,94 @@
     "index": 1,
     "name": "Aaliyah",
     "imageAddress": "/Members/Aaliyah.jpg",
-    "Roles": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Roles": "Project together-holder",
     "phone":"",
     "email":""
   },
   {
     "index": 2,
     "name": "Sobhan",
-    "Roles": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "imageAddress": "/Members/Sobhan.jpg",
+    "Roles": "Sugar daddy of project (until funds arrive)",
     "phone":"",
     "email":""
   },
   {
     "index": 3,
     "name": "Sahba",
-    "Roles": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "imageAddress": "/Members/Sahba.jpg",
+    "Roles": "Project marketter",
     "phone":"",
     "email":""
   },
   {
     "index": 4,
     "name": "Adib",
-    "Roles": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "imageAddress": "/Members/Adib.jpg",
+    "Roles": "Project designer/mid-caller",
     "phone":"",
     "email":""
   },
   {
     "index": 5,
     "name": "Noora",
-    "Roles": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "imageAddress": "/Members/Noora.jpg",
+    "Roles": "Project mama",
     "phone":"",
     "email":""
   },
   {
     "index": 6,
     "name": "Roham",
-    "Roles": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "imageAddress": "/Members/Roham.jpg",
+    "Roles": "Master procrastinator",
     "phone":"",
     "email":""
   },
   {
     "index": 7,
-    "name": "Aaliyah",
-    "Roles": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "name": "Romina",
+    "imageAddress": "/Members/Romina.jpg",
+    "Roles": "Project novelist",
     "phone":"",
     "email":""
   },
   {
     "index": 8,
-    "name": "Aaliyah",
-    "Roles": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "name": "Radin",
+    "imageAddress": "/Members/Radin.jpg",
+    "Roles": "Project member I guess",
     "phone":"",
     "email":""
   },
   {
     "index": 9,
-    "name": "Aaliyah",
-    "Roles": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "name": "Carmel",
+    "imageAddress": "/Members/Carmel.jpeg",
+    "Roles": "Project speaking lady",
+    "phone":"",
+    "email":""
+  },
+  {
+    "index": 10,
+    "name": "Bassim",
+    "imageAddress": "/Members/Bassim.jpg",
+    "Roles": "Project nerd",
+    "phone":"",
+    "email":""
+  },
+  {
+    "index": 11,
+    "name": "Celine",
+    "imageAddress": "/Members/Celine.jpg",
+    "Roles": "Project member",
+    "phone":"",
+    "email":""
+  },
+  {
+    "index": 12,
+    "name": "Nima",
+    "Roles": "Project member",
     "phone":"",
     "email":""
   }

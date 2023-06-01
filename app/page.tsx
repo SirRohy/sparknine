@@ -17,16 +17,11 @@ export default function Home() {
           />
         </div>
         <div className="p-4">
-          <p className="w-full p-8 text-6xl font-medium">Spark9 Background</p>
+          <p className="w-full p-8 text-6xl font-medium">Spark9 Project</p>
         </div>
-        <Link
-          className="rounded-sm border px-8 py-2 text-3xl font-medium hover:border-slate-100/20"
-          href={"/learn"}
-        >
-          <p>Get started for free</p>
-        </Link>
+        
       </div>
-      <div className="h-screen bg-transparent"></div>
+      
     </main>
   );
 }
