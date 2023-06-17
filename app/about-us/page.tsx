@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
-import members from "./Members.json";
+import members from "./Members";
 import CarouselComponent from "@/app/components/CarouselComponent";
 
 export default function Home() {
@@ -25,9 +25,9 @@ export default function Home() {
                     ? member.imageAddress
                     : "/Members/anonymous.png";
                   return (
-                    <div key={index} className="h-[100%] max-h-[1000px]">
-                      <div className="flex w-full max-sm:h-[90%] max-md:h-[75%] max-lg:h-[80%] h-[80%] max-h-screen">
-                        <div className="relative flex flex-col justify-center bg-inherit w-[100%] max-w-screen max-h-screen">
+                    <div key={index} className="h-[100%] ">
+                      <div className="flex w-full max-sm:h-[90%] max-md:h-[75%] max-lg:h-[80%] h-[80%] min-h-0 max-h-screen justify-center">
+                        <div className="flex flex-col justify-center bg-inherit max-w-screen max-h-screen sm:aspect-[8/6] max-sm:aspect-square">
                           <img
                             src={imageUrl}
                             alt={`Slide ${index}`}
@@ -35,17 +35,17 @@ export default function Home() {
                           />
                         </div>
                       </div>
-                      <div className="absolute w-full flex flex-col items-center bg-secondary pb-7">
-                        <p className="text-xl">
+                      <div className="absolute bottom-0 max-sm:-bottom-5 max-sm:text-sm text-xl w-full flex flex-col items-center bg-tertiary pb-7">
+                        <p className="">
                           <strong>{member.name}</strong>
                         </p>
-                        <p className="text-lg flex flex-wrap">
+                        <p className="flex flex-wrap">
                           <strong>Roles:</strong> {member.Roles}
                         </p>
-                        <p className="text-lg">
+                        <p className="">
                           <strong>Phone:</strong> {member.phone}
                         </p>
-                        <p className="text-lg">
+                        <p className="">
                           <strong>Email:</strong> {member.email}
                         </p>
                       </div>
@@ -57,31 +57,77 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="flex flex-col items-center justify-start self-start text-center col-span-1 xl:col-span-2 max-w-screen p-4">
+          <div className="flex flex-col items-center justify-start self-start text-center col-span-1 2xl:col-span-2 max-w-screen p-4">
             <h2 className="text-6xl pb-4">Our Socials:</h2>
-            <div className="relative flex flex-col justify-start bg-inherit w-full max-w-screen max-h-screen">
-              <Link href={"https://www.instagram.com/spark9project/"}>
-                <div className="relative flex flex-row text-2xl">
-                  <img
-                    src={"Instagram.png"}
-                    alt={`Instagram`}
-                    className="w-10 h-10 object-contain"
-                  />
-                  <p className="pl-2">&#64;spark9project</p>
-                </div>
-              </Link>
-            </div>
-            <div className="relative flex flex-col justify-start bg-inherit w-full max-w-screen max-h-screen">
-              <Link href={"mailto:spark9project@gmail.com"}>
-                <div className="relative flex flex-row text-2xl">
-                  <img
-                    src={"Gmail.png"}
-                    alt={`Gmail`}
-                    className="w-10 h-10 object-contain"
-                  />
-                  <p className="pl-3">spark9project&#64;gmail.com</p>
-                </div>
-              </Link>
+            <div className="grid max-sm:grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 2xl:grid-cols-2">
+              <div className="relative flex flex-col justify-start bg-inherit w-full max-w-screen max-h-screen mb-1">
+                <Link href={"https://www.instagram.com/spark9project/"}>
+                  <div className="relative flex flex-row text-2xl">
+                    <img
+                      src={"Instagram.png"}
+                      alt={`Instagram`}
+                      className="w-10 h-10 object-contain"
+                    />
+                    <p className="pl-2">&#64;spark9project</p>
+                  </div>
+                </Link>
+              </div>
+              <div className="relative flex flex-col justify-start bg-inherit w-full max-w-screen max-h-screen mb-1">
+                <Link
+                  href={
+                    "https://www.facebook.com/profile.php?id=100093136684134&mibextid=LQQJ4d"
+                  }
+                >
+                  <div className="relative flex flex-row text-2xl">
+                    <img
+                      src={"Facebook.png"}
+                      alt={`Facebook`}
+                      className="w-10 h-10 object-contain"
+                    />
+                    <p className="pl-3">Spark 9 Project</p>
+                  </div>
+                </Link>
+              </div>
+              <div className="relative flex flex-col justify-start bg-inherit w-full max-w-screen max-h-screen mb-1">
+                <Link
+                  href={
+                    "https://www.facebook.com/profile.php?id=100093136684134&mibextid=LQQJ4d"
+                  }
+                >
+                  <div className="relative flex flex-row text-2xl">
+                    <img
+                      src={"Linkedin.png"}
+                      alt={`Linkedin`}
+                      className="w-10 h-10 object-contain"
+                    />
+                    <p className="pl-3">Spark-9-Project</p>
+                  </div>
+                </Link>
+              </div>
+              <div className="relative flex flex-col justify-start bg-inherit w-full max-w-screen max-h-screen mb-1">
+                <Link href={"https://www.tiktok.com/@spark9project"}>
+                  <div className="relative flex flex-row text-2xl">
+                    <img
+                      src={"Tiktok.png"}
+                      alt={`Tiktok`}
+                      className="w-10 h-10 object-contain"
+                    />
+                    <p className="pl-3">@spark9project</p>
+                  </div>
+                </Link>
+              </div>
+              <div className="relative flex flex-col justify-start bg-inherit w-full max-w-screen max-h-screen mb-1">
+                <Link href={"mailto:spark9project@gmail.com"}>
+                  <div className="relative flex flex-row text-2xl">
+                    <img
+                      src={"Gmail.png"}
+                      alt={`Gmail`}
+                      className="w-10 h-10 object-contain"
+                    />
+                    <p className="pl-3">spark9project&#64;gmail.com</p>
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

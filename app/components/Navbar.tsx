@@ -46,7 +46,6 @@ const Navbar = memo(function Navbar({ path }: { path: string }) {
         <Link href={"/"}>
           <div className="flex">
             <Image src="/Logo.jpg" alt="Spark9 Logo" width={150} height={-1} />
-            
           </div>
         </Link>
       </div>
