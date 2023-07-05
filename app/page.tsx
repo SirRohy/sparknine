@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main>
       <Navbar path="/" />
-      <div className="relative bg-background flex h-screen flex-col items-center justify-center self-center text-center text-textcolor">
+      <div className="relative bg-background flex h-[calc(100vh-5rem)] w-screen flex-col items-center justify-center self-center text-center text-textcolor">
         <div className="relative">
           <Image
             src="/nature.jpg"
@@ -17,7 +17,8 @@ export default function Home() {
           />
         </div>
         <div className="p-4">
-          <p className="w-full p-8 text-6xl font-medium">Spark9 Project</p>
+          <p className="w-full text-6xl max-sm:text-4xl font-medium">Spark9 Project</p>
+          <p className="py-2 text-xl">We are a group of </p>
         </div>
         
       </div>

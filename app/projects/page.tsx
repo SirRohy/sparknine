@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import ProjectIcon from "./ProjectIcon";
 import projects from "./Projects";
 
+
 export default function Home() {
   return (
     <main>

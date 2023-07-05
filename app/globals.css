@@ -26,3 +26,7 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  background-color: rgb(212,212,216);
+}

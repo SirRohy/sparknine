@@ -1,61 +1,38 @@
 import Image from "next/image";
 import Link from "next/link";
 import { memo } from "react";
-
-interface navItem {
-  label: string;
-  path: string;
-}
-
-interface authItem {
-  label: string;
-  styles: string;
-  path: string;
-  divStyles: string;
-}
+import NavbarCollapsed from "./NavbarCollapsed";
 
 // TODO: update paths once pages are added
-const items: navItem[] = [
-  { label: "Projects", path: "/projects" },
-  { label: "Blogs", path: "/blogs" },
-  { label: "About Us", path: "/about-us" },
-  { label: "Donations", path: "/donations" },
-];
-
-const authButtons: authItem[] = [
-  {
-    label: "Sign in",
-    path: "/signin",
-    styles:
-      "text-xl font-medium transition ease-linear duration-100 hover:text-blue-400/80",
-    divStyles: "m-2 mx-4",
-  },
-  {
-    label: "Sign up",
-    path: "/signup",
-    styles:
-      "text-xl font-medium transition ease-linear duration-100 bg-blue-700 p-2 px-4 rounded-xl hover:bg-opacity-70",
-    divStyles: "ml-2",
-  },
+const items = [
+  { label: "Projects", href: "/projects" },
+  { label: "Blogs", href: "/blogs" },
+  { label: "About Us", href: "/about-us" },
+  { label: "Donations", href: "/donations" },
 ];
 
 const Navbar = memo(function Navbar({ path }: { path: string }) {
   return (
-    <nav className="sticky top-0 h-20 z-10 flex w-full items-center justify-between bg-slate-900 p-6 text-slate-200">
+    <nav className="sticky top-0 h-20 z-10 flex w-screen items-center justify-between bg-slate-900 p-6 text-slate-200">
       <div>
         <Link href={"/"}>
-          <div className="flex">
-            <Image src="/Logo.jpg" alt="Spark9 Logo" width={150} height={-1} />
+          <div className="flex mr-5">
+            <Image
+              src="/Logo-white.png"
+              alt="Spark9 Logo"
+              width={150}
+              height={-1}
+            />
           </div>
         </Link>
       </div>
       <ul className="max-sm:hidden flex justify-between w-full max-w-screen-sm">
         {items.map((item) => (
           <li key={item.label} className="p-2 flex justify-between">
-            <Link href={item.path}>
+            <Link href={item.href}>
               <p
                 className={`text-xl font-medium transition duration-100 ease-linear ${
-                  path === item.path
+                  path === item.href
                     ? "text-blue-600"
                     : "hover:text-blue-400/80"
                 }`}
@@ -66,7 +43,9 @@ const Navbar = memo(function Navbar({ path }: { path: string }) {
           </li>
         ))}
       </ul>
-      <div className="max-sm:hidden text-white"></div>
+      <div>
+        <NavbarCollapsed items={items} />
+      </div>
     </nav>
   );
 });

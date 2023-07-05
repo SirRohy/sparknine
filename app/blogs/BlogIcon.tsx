@@ -1,15 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { memo } from "react";
-import projects from "./Blogs.json";
+import projects from "./Blogs";
 
 const ProjectIcon = memo(function ProjectIcon({ index }: { index: number }) {
-  const project = projects.find((project) => project.index === index)
+  const project = projects.find((project) => project.index === index);
   return (
-    <Link
-      href={`/projects/${project?.name.replace(/ /g, "-")}`}
-      className=""
-    >
+    <Link href={`/projects/${project?.name.replace(/ /g, "-")}`} className="">
       <div className="flex flex-col items-center">
         <Image
           src="/nature.jpg"
@@ -22,7 +19,6 @@ const ProjectIcon = memo(function ProjectIcon({ index }: { index: number }) {
           <p className="text-3xl font-bold">{project?.name} </p>
         </div>
       </div>
-      
     </Link>
   );
 });

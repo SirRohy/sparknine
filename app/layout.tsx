@@ -24,7 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} h-screen bg-background`}>
+    <html
+      lang="en"
+      className={`${inter.variable} bg-background`}
+    >
       <body>{children}</body>
     </html>
   );
