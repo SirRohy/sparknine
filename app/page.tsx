@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main>
       <Navbar path="/" />
-      <div className="relative bg-background flex h-[calc(100vh-5rem)] w-screen flex-col items-center justify-center self-center text-center text-textcolor">
+      <div className="relative bg-background flex min-h-[calc(100vh-5rem)] h-max w-screen flex-col items-center justify-center self-center text-center text-textcolor">
         <div className="relative">
           <Image
             src="/nature.jpg"
