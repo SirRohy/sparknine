@@ -7,9 +7,10 @@ interface CarouselComponentProps {
   contents: React.ReactElement[];
   seconds: number;
   width: string;
+  get_select_index?: (index: number, item: React.ReactNode) => void;
 }
 
-const CarouselComponent = ({ contents, seconds, width }: CarouselComponentProps) => {
+const CarouselComponent = ({ contents, seconds, width, get_select_index }: CarouselComponentProps) => {
 
   return (
     <div className="w-full flex flex-shrink min-w-[300px]">
@@ -23,6 +24,7 @@ const CarouselComponent = ({ contents, seconds, width }: CarouselComponentProps)
         showThumbs={false}
         dynamicHeight={false}
         width={width}
+        onChange={get_select_index}
       >
         {contents}
       </Carousel>

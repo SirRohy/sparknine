@@ -23,7 +23,7 @@ const ProjectPage = memo(function ProjectPage({
   return (
     <main>
       <Navbar path="/" />
-      <div className="relative bg-background w-screen min-h-[calc(100vh-5rem)] grid grid-cols-2 items-top justify-center self-center text-center text-textcolor md:p-6">
+      <div className="relative bg-background w-screen min-h-[calc(100vh-5rem)] grid grid-cols-2 gap-4 items-top justify-center self-center text-center text-textcolor md:p-6">
         <div
           className={`flex h-max flex-col ${
             project.pictures.length > 0
@@ -32,22 +32,32 @@ const ProjectPage = memo(function ProjectPage({
           }`}
         >
           <h1 className="text-6xl">{project.name}</h1>
-          <p className="text-2xl font-bold">
-            Location:&nbsp;{project.location}
+          <p className="text-2xl">
+            <span className="font-bold">Location:</span>&nbsp;{project.location}
           </p>
-          <p className="text-2xl font-bold">
-            Date and time:&nbsp;
-            {`${dayjs(project.startDate).format("dddd MMM D, YYYY")} @ ${dayjs(
-              "2001-01-01" + project.startTime,
-              "HH:mm"
-            ).format("h:mma")} - ${dayjs(
-              "2001-01-01" + project.endTime,
-              "HH:mm"
-            ).format("h:mma")}`}
+          <p className="text-2xl">
+            <span className="font-bold">Date and time:</span>&nbsp;
+            {project.startDate === project.endDate
+              ? `${dayjs(project.startDate).format(
+                  "dddd MMM D, YYYY"
+                )} @ ${dayjs("2001-01-01" + project.startTime, "HH:mm").format(
+                  "h:mma"
+                )} - ${dayjs("2001-01-01" + project.endTime, "HH:mm").format(
+                  "h:mma"
+                )}`
+              : `${dayjs(project.startDate).format(
+                  "dddd MMM D, YYYY"
+                )} @ ${dayjs("2001-01-01" + project.startTime, "HH:mm").format(
+                  "h:mma"
+                )} - ${dayjs(project.endDate).format(
+                  "dddd MMM D, YYYY"
+                )} @ ${dayjs("2001-01-01" + project.endTime, "HH:mm").format(
+                  "h:mma"
+                )}`}
           </p>
 
           {project.description.split("\n\n").map((paragraph, index) => (
-            <p key={index} className="text-2xl">
+            <p key={index} className="text-xl">
               {paragraph}
             </p>
           ))}

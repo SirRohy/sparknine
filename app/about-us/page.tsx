@@ -3,6 +3,7 @@ import Image from "next/image";
 import Navbar from "../components/Navbar";
 import members from "./Members";
 import CarouselComponent from "@/app/components/CarouselComponent";
+import MembersCarousel from "./MembersCarousel";
 
 export default function Home() {
   const images = [
@@ -18,44 +19,7 @@ export default function Home() {
         <div className="w-screen grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4 items-center gap-10">
           <div className="flex flex-col flex-[1_1_100%] items-center justify-start w-full max-sm:w-screen max-sm:p-0 h-min max-h-[1200px] p-4 col-span-2">
             <h1 className="text-6xl pb-4">Our Members:</h1>
-            <div className="relative max-w-screen bg-secondary">
-              <CarouselComponent
-                contents={members.map((member, index) => {
-                  const imageUrl = member.imageAddress
-                    ? member.imageAddress
-                    : "/Members/anonymous.png";
-                  return (
-                    <div key={index} className="h-[100%] ">
-                      <div className="flex w-full max-sm:h-[90%] max-md:h-[75%] max-lg:h-[80%] h-[80%] min-h-0 max-h-screen justify-center">
-                        <div className="flex flex-col justify-center bg-inherit max-w-screen max-h-screen sm:aspect-[8/6] max-sm:aspect-square">
-                          <img
-                            src={imageUrl}
-                            alt={`Slide ${index}`}
-                            className="w-full h-full object-contain"
-                          />
-                        </div>
-                      </div>
-                      <div className="absolute bottom-0 max-sm:-bottom-5 max-sm:text-sm text-xl w-full flex flex-col items-center bg-tertiary pb-7">
-                        <p className="">
-                          <strong>{member.name}</strong>
-                        </p>
-                        <p className="flex flex-wrap">
-                          <strong>Roles:</strong> {member.Roles}
-                        </p>
-                        <p className="">
-                          <strong>Phone:</strong> {member.phone}
-                        </p>
-                        <p className="">
-                          <strong>Email:</strong> {member.email}
-                        </p>
-                      </div>
-                    </div>
-                  );
-                })}
-                seconds={5}
-                width={"100%"}
-              />
-            </div>
+            <MembersCarousel />
           </div>
           <div className="flex flex-col items-center justify-start self-start text-center col-span-1 2xl:col-span-2 max-w-screen p-4">
             <h2 className="text-6xl pb-4">Our Socials:</h2>
