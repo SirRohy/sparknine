@@ -13,7 +13,7 @@ const items = [
 
 const Navbar = memo(function Navbar({ path }: { path: string }) {
   return (
-    <nav className="sticky top-0 h-20 z-10 flex w-screen items-center justify-between bg-slate-900 p-6 text-slate-200">
+    <nav className="sticky top-0 h-20 z-20 flex w-screen items-center justify-between bg-slate-900 p-6 text-slate-200">
       <div>
         <Link href={"/"}>
           <div className="flex mr-5">

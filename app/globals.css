@@ -28,5 +28,9 @@ body {
 }
 
 .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
-  background-color: rgb(212,212,216);
+  background-color: rgb(65, 65, 165);
+}
+
+::-webkit-scrollbar {
+  width: 0;
 }
