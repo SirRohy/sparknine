@@ -13,9 +13,9 @@ export default function Home() {
         </div>
         <div className="relative grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-items-stretch w-full gap-6">
           {projects.map(
-            (project) =>
+            (project, idx) =>
               project.status === "upcoming" && (
-                <ProjectIcon index={project.index} />
+                <ProjectIcon key={idx} index={project.index} />
               )
           )}
         </div>
@@ -24,9 +24,9 @@ export default function Home() {
         </div>
         <div className="relative grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-items-stretch w-full gap-6">
           {projects.map(
-            (project) =>
+            (project, idx) =>
               project.status === "finished" && (
-                <ProjectIcon index={project.index} />
+                <ProjectIcon key={idx} index={project.index} />
               )
           )}
         </div>

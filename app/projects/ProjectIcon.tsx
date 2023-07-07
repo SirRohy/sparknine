@@ -6,7 +6,7 @@ import projects from "./Projects";
 const ProjectIcon = memo(function ProjectIcon({ index }: { index: number }) {
   const project = projects.find((project) => project.index === index);
   return (
-    <Link href={`/projects/${project?.name.replace(/ /g, "-")}`} className="">
+    <Link key={index} href={`/projects/${project?.name.replace(/ /g, "-")}`} className="">
       <div className="flex flex-col items-center">
         <Image
           src={`${project?.coverImage}`}
