@@ -15,7 +15,7 @@ const ProjectIcon = memo(function ProjectIcon({ index }: { index: number }) {
         <Image
           src={`${project?.coverImage}`}
           alt="Image description"
-          className="rounded-sm aspect-video"
+          className="rounded-sm aspect-video object-fill"
           width={700}
           height={-1}
         />

@@ -12,7 +12,7 @@ export default function Home() {
             src="/nature.jpg"
             alt="Image description"
             className="rounded-sm"
-            width={250}
+            width={500}
             height={150}
           />
         </div>
@@ -20,14 +20,14 @@ export default function Home() {
           <p className="w-full text-6xl max-sm:text-4xl font-medium">
             Spark9 Project
           </p>
-          <p className="py-2 text-xl">
+          <p className="py-2 text-2xl">
             SPARK9 is a project that aims to spark vibrancy, learning, and
             creativity within the wider community. Through 9 unique initiatives,
             we want to inspire children, youth and adults to become drivers of
             the UN Sustainable Development Goals. Each initiative is a
             ‘mini-project’ that connects to a SDG:
           </p>
-          <ol className="list-decimal list-inside">
+          <ol className="list-decimal list-inside text-xl">
             <li>Super Beach Clean-up</li>
             <li>For-Cancer Bike Fundraiser</li>
             <li>Music Camp</li>
@@ -38,7 +38,7 @@ export default function Home() {
             <li>Sustainability Panel</li>
             <li>Puppy Therapy Day</li>
           </ol>
-          <p className="py-2 text-xl">
+          <p className="py-2 text-2xl">
             We hope our impact will spark long-term community relationships,
             goodwill and inner passion to serve society at large. Each project
             will impact a certain demographic of people, hopefully inspiring

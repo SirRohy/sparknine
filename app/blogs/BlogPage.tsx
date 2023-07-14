@@ -41,7 +41,7 @@ const BlogPage = memo(function BlogPage({
             Date Created:&nbsp;{`${dayjs(blog.date).format("MMM D, YYYY")}`}
           </p>
           {blog.content.split("\n\n").map((paragraph, index) => (
-            <p key={index} className="text-2xl">
+            <p key={index} className="text-2xl indent-4">
               {paragraph}
             </p>
           ))}

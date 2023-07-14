@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main>
       <Navbar path="/projects" />
-      <div className="relative bg-background flex h-max flex-col items-center justify-center self-center text-center text-textcolor p-6">
+      <div className="relative bg-background flex h-max flex-col items-center justify-center self-center text-center text-textcolor p-6 max-sm:p-0">
         <div className="w-full text-center border-b-[5px] border-bordercolor mb-2 pb-2 text-4xl 2xl:text-6xl 2xl:pb-4">
           Upcoming Projects
         </div>

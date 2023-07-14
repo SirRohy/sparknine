@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} bg-background`}
+      className={`${inter.variable} bg-background overflow-x-hidden`}
     >
       <body>{children}</body>
     </html>
