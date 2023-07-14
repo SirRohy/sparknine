@@ -9,11 +9,11 @@ export default function Home() {
       <div className="relative bg-background flex min-h-[calc(100vh-5rem)] h-max w-screen flex-col items-center justify-center self-center text-center text-textcolor">
         <div className="relative">
           <Image
-            src="/nature.jpg"
+            src="/Cover.jpg"
             alt="Image description"
             className="rounded-sm"
-            width={500}
-            height={150}
+            width={1000}
+            height={-1}
           />
         </div>
         <div className="p-4">

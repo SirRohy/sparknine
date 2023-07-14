@@ -14,15 +14,15 @@ export default function Home() {
             src="/UnderConstruction.webp"
             alt="Image description"
             className="rounded-sm"
-            width={500}
-            height={150}
+            width={1000}
+            height={-1}
           />
         </div>
         <div className="p-4">
           <p className="w-full text-6xl max-sm:text-4xl font-medium">
             Donations
           </p>
-          <p className="py-2 text-xl indent-4">
+          <p className="py-2 text-2xl indent-4">
             We are a group that is committed towards providing a positive impact
             within our own immediate communities through a large variety of
             different service projects. As a non-profit organisation, we rely on
@@ -32,7 +32,7 @@ export default function Home() {
             communities as we push forward to unite different clusters, please
             kindly consider donating to help us support our cause!
           </p>
-          <p className="py-2 text-xl">
+          <p className="py-2 text-2xl">
             As of right now, the donations page is currently unavailable. If you
             are still willing to make some small contribution, we advise that
             you reach us through{" "}
