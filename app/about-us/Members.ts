@@ -42,7 +42,7 @@ const members = [
   {
     index: 6,
     name: "Roham",
-    imageAddress: "/Members/Roham.jpeg",
+    imageAddress: "/Members/Roham.jpg",
     Roles: "IT lead",
     phone: "",
     email: "",

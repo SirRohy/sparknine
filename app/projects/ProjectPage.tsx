@@ -10,7 +10,7 @@ const ProjectPage = memo(function ProjectPage({
     index: number;
     name: string;
     coverImage: string;
-    pictures: string[];
+    gallery: string[];
     description: string;
     startDate: string;
     endDate: string;
@@ -27,7 +27,7 @@ const ProjectPage = memo(function ProjectPage({
       <div className="relative bg-background w-screen min-h-[calc(100vh-5rem)] grid grid-cols-2 gap-4 items-top justify-center self-center text-center text-textcolor max-sm:p-2 md:p-6">
         <div
           className={`flex h-max flex-col ${
-            project.pictures.length > 0
+            project.gallery.length > 0
               ? "col-span-1 max-lg:col-span-2"
               : "col-span-2"
           }`}
@@ -72,24 +72,43 @@ const ProjectPage = memo(function ProjectPage({
           ))}
         </div>
         <div className="col-span-1 max-lg:col-span-2">
-          {project.pictures.length > 0 ? (
+          {project.gallery.length > 0 ? (
             <div>
               <h2 className="text-6xl pb-4">Gallery</h2>
               <div className="relative max-w-screen max-h-[1000px] bg-secondary">
                 <CarouselComponent
-                  contents={project.pictures.map((picture, index) => {
-                    const imageUrl =
-                      `/Projects/${project?.name.replace(/ /g, "-")}/` +
-                        picture ?? "/Members/anonymous.png";
+                  contents={project.gallery.map((content, index) => {
+                    const isVideo =
+                      typeof content === "string" && content.endsWith(".mp4");
+                    const url = isVideo
+                      ? `/Projects/${project?.name.replace(
+                          / /g,
+                          "-"
+                        )}/${content}`
+                      : `/Projects/${project?.name.replace(
+                          / /g,
+                          "-"
+                        )}/${content}` ?? "/Members/anonymous.png";
                     return (
                       <div key={index} className="">
                         <div className="flex w-full max-h-[1000px] max-w-screen justify-center">
                           <div className="flex flex-col justify-center bg-inherit max-w-screen max-h-screen">
-                            <img
-                              src={imageUrl}
-                              alt={`Slide ${index}`}
-                              className="w-full h-[100%] object-contain"
-                            />
+                            {isVideo ? (
+                              <video
+                                autoPlay
+                                loop
+                                muted
+                                className="w-full h-[1000px] max-h-[calc(100vh-6rem)] object-contain"
+                              >
+                                <source src={url} type="video/mp4" />
+                              </video>
+                            ) : (
+                              <img
+                                src={url}
+                                alt={`Slide ${index}`}
+                                className="w-full h-[1000px] max-h-[calc(100vh-6rem)] object-contain"
+                              />
+                            )}
                           </div>
                         </div>
                       </div>
