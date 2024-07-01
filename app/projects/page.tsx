@@ -3,6 +3,8 @@ import Navbar from "../components/Navbar";
 import ProjectIcon from "./ProjectIcon";
 import projects from "./Projects";
 
+/* updating for new date */
+
 export default function Home() {
   return (
     <main>
